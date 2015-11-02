@@ -1,0 +1,52 @@
+<a href="./#/doctor_apps">Back to Appointments</a>
+
+<h3 class="col-xs-5">New Appointment</h3>​
+<!-- ​<div class='error' ng-model='errors'>{{error.error}}</div> -->
+<div ng-controller="AppsController as newAppCtrl">
+  <div class='error' ng-bind='newAppCtrl.errors'>{{errors}}</div>
+    ​<div class="row">​
+    <form class="form-horizontal" role="form">​
+      <div class="form-group">​
+        Name: <input type="text"  ng-model='newAppCtrl.name'></input><br><br>
+        Date: <input type="date" ng-model='newAppCtrl.date' value="" ><br><br>
+        Time: <select class="" ng-model='newAppCtrl.time' value="">
+          <option>8:00 AM</option>
+          <option>9:00 AM</option>
+          <option>10:00 AM</option>
+          <option>11:00 AM</option>
+          <option>12:00 PM</option>
+          <option>1:00 PM</option>
+          <option>2:00 PM</option>
+          <option>3:00 PM</option>
+          <option>4:00 PM</option>
+          <option>5:00 PM</option>
+        </select><br><br>
+        <!-- Time: <input type='time' ng-model='newAppCtrl.time' value='' ><br><br> -->
+        Complaint: <textarea ng-model='newAppCtrl.complain' rows="8" cols="40" required></textarea><br><br>
+        <button type="submit" class="btn btn-danger" ng-click="orderCtrl.addOrder(newOrder);">Cancel</button>​
+        <button type="submit" class="btn btn-primary" ng-click="newAppCtrl.addApp(newAppCtrl);">Add Appointment</button>​​
+        </div>​
+        </form>​
+      </div>
+      <!-- <table class="table table-striped table-bordered">
+        <thead class-'info'>​
+          <tr>​
+            <th>Date</th>​
+            <th>Time</th>​
+            <th>Patient Name</th>​
+            <th>Complaint</th>​
+            <th>Action</th>​
+          </tr>​
+        </thead>​
+        <tbody>​
+          <tr ng-repeat="app in newAppCtrl.apps | filter: filter_name | orderBy: 'date'">​
+            <td ng-bind="app.date | date:'longDate'"></td>​
+            <!-- <td ng-bind="app.time | date:'shortTime'"></td>​ -->
+            <!-- <td ng-bind="app.time"></td>​
+            <td ng-bind="app.name"></td>​
+            <td ng-bind="app.complain"></td>
+            <td><button class="btn btn-danger" ng-click="newAppCtrl.destroyApp(app)">Cancel</button></td>​
+          </tr>​
+        </tbody>​
+      </table>​ --> -->
+</div>      ​

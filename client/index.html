@@ -1,0 +1,83 @@
+<!DOCTYPE html>​
+​<html lang="en" ng-app="myApp">​
+​<head>​
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.17.2/build/cssreset/cssreset-min.css">​
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="/css/lib/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/css/lib/bootstrap-theme.css">
+<link rel="stylesheet" type="text/css" href="/css/lib/bootstrap-social.css">
+<link rel="stylesheet" type="text/css" href="/css/lib/font-awesome.css">
+<script src="/js/lib/jquery-1.9.1.js"></script>
+<script src="/js/lib/jquery-ui.js"></script>
+<script type="text/javascript" src="/js/lib/bootstrap.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js"></script>
+<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="./app.js"></script>​
+<script type="text/javascript" src='/js/factories/factories.js'></script>​
+<script type="text/javascript" src='/js/controllers/controllers.js'></script>​
+
+<title>Doctor Appointments</title>​
+<script type ="text/javascript">
+// $(document).ready(function(){
+//       var socket = io.connect();
+//       var current_user;
+// 			var name;
+//
+//         var new_user = function(){
+//           name = prompt('Please enter your name to make appointment?');
+// 					// socket.emit('page_load', {user: name});
+// 						$(".name").append(JSON.stringify(name))
+// 						// $("#name").val(name);
+// 						console.log(name);
+// 						}
+//           new_user();
+//
+// 					socket.on('existing_user', function(data){
+// 					$(".error").html(JSON.stringify(data.error))
+// 					new_user();
+// 					})
+
+				// 	socket.on('load_users', function(data){
+				// 		console.log(data);
+				// 	  $(".error").html(" ")
+				// 		$(".name").append(JSON.stringify(data.current_user))
+				// 	current_user = data.current_user;
+				// })
+      // })
+</script>
+
+​</head>​
+<style media="screen">
+  .product {
+    width: 175px;
+    height: 175px;
+    border: 1px solid black;
+  }
+  .row {
+    width: 700px;
+		margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+	.error{
+		color:red;
+	}
+  .title {
+    text-align: center;
+  }
+	h2 {
+		font-family: sans-serif;
+	}
+	a {
+		margin-left: 50px;
+	}
+	.welcome{
+		margin-left: 50px
+	}
+</style>
+​<body>​
+<div class='error' ng-model='errors'>{{error.errors.name}}</div>
+  <div ng-view=""></div>​
+​</body>​
+​</html>
